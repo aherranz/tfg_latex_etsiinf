@@ -5,7 +5,6 @@
 %%***********************************************
 %% Preámbulo del documento.
 %%***********************************************
-\documentclass[a4paper,11pt]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,spanish,es-lcroman]{babel}
@@ -17,7 +16,7 @@
 {geometry}
 \usepackage{afterpage}
 \usepackage{colortbl,longtable}
-\usepackage[pdfborder={0 0 0}]{hyperref} 
+\usepackage[pdfborder={0 0 0}]{hyperref}
 \usepackage{pdfpages}
 \usepackage{url}
 \usepackage[stable]{footmisc}
@@ -68,63 +67,3 @@
   \penalty -\@Mi
 }
 \makeatother
-%%-----------------------------------------------
-%% Estilos código de lenguajes: Consola, C, C++ y Python
-%%-----------------------------------------------
-\usepackage{color}
-
-\definecolor{gray97}{gray}{.97}
-\definecolor{gray75}{gray}{.75}
-\definecolor{gray45}{gray}{.45}
-
-\usepackage{listings}
-\lstset{ frame=Ltb,
-     framerule=0pt,
-     aboveskip=0.5cm,
-     framextopmargin=3pt,
-     framexbottommargin=3pt,
-     framexleftmargin=0.4cm,
-     framesep=0pt,
-     rulesep=.4pt,
-     backgroundcolor=\color{gray97},
-     rulesepcolor=\color{black},
-     %
-     stringstyle=\ttfamily,
-     showstringspaces = false,
-     basicstyle=\scriptsize\ttfamily,
-     commentstyle=\color{gray45},
-     keywordstyle=\bfseries,
-     %
-     numbers=left,
-     numbersep=6pt,
-     numberstyle=\tiny,
-     numberfirstline = false,
-     breaklines=true,
-   }
-\lstnewenvironment{listing}[1][]
-   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
-
-\lstdefinestyle{consola}
-   {basicstyle=\scriptsize\bf\ttfamily,
-    backgroundcolor=\color{gray75},    
-    }
-
-\lstdefinestyle{CodigoC}
-   {basicstyle=\scriptsize,
-	frame=single,
-	language=C,
-	numbers=left
-   }
-   
-\lstdefinestyle{CodigoC++}
-   {basicstyle=\small,
-	frame=single,
-	backgroundcolor=\color{gray75},
-	language=C++,
-	numbers=left
-   }
-
-\lstdefinestyle{Python}
-   {language=Python,    
-   }
-\makeatother   
