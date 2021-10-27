@@ -97,7 +97,9 @@
 %%-----------------------------------------------
 %% Numeración arábiga:
 \mainmatter
+
 %%-----------------------------------------------
+%% Contenido del TFG
 \input{secciones/intro}
 
 \input{secciones/desarrollo}
@@ -106,7 +108,12 @@
 
 \input{secciones/impacto}
 
-\input{secciones/biblio}
+%%-----------------------------------------------
+%% Bibliografía
+\cleardoublepage
+\bibliographystyle{IEEEtran}
+\bibliography{secciones/biblio}
+\addcontentsline{toc}{chapter}{Bibliografía}
 
 %% -----------------------------------------------
 %% Anexos

@@ -17,8 +17,6 @@ Para usar esta plantilla te recomendamos:
 
 Quedan algunas cosas por mejorar en esta plantilla:
 
-- Buena práctica en el uso de la bibliografía (se puede extraer de
-  https://github.com/aherranz/tfg_latex.
 - Convertir el preámbulo en un `sty` en vez de un fichero latex y así
   poder usar \usepackage{tfg_etsiinf} en vez de \input{preambulo}.
 - Mejorar el crash-course de LaTeX en la intro de la plantilla.
