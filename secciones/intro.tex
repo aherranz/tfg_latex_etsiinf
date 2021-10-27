@@ -51,8 +51,137 @@ Para elaborar la memoria final del TFG con esta plantilla, seguir los siguientes
   directorio \url{secciones}.
 \item Por supuesto puedes modificar la estructura de secciones
   propuestas para adecuarla al tipo de trabajo que realices (no
-  olvides modificar y reordenar los \texttt{inputs} en el documento
+  olvides modificar y reordenar los \verb|\inputs| en el documento
   principal).
 \item Si no sabes LaTeX te recomendamos explorar el contenido de los
   ficheros para aprender un uso básico y algunas buenas prácticas.
 \end{enumerate}
+
+\section{Algunas notas sobre el uso de \LaTeX}
+\label{sec:latex}
+
+Si es la primera vez que te enfrentas a \LaTeX\ quizás ya te hayas
+percatado que se parece ``mucho'' a un lenguaje de programación:
+escribes texto plano para describir el documento y luego compilas para
+generar el PDF.
+
+Lo que puedes escribir en los ficheros \LaTeX\ (ficheros \url{*.tex})
+deberá seguir una sintaxis muy concreta y algunas buenas
+prácticas. Las siguientes secciones entran en algunos detalles
+interesantes.
+
+\subsection{Estructura en capítulos, secciones y párrafos}
+
+Para estructurar tu documento basta con que incluyas marcas de dónde
+empiezan los capítulos y secciones. Así\footnote{Como ya habrás podido
+  observar en este mismo ejemplo.}:
+
+\begin{verbatim}
+\chapter{Título del capítulo}
+\section{Título de la sección}
+\end{verbatim}
+
+Es \textbf{importante} observar que los párrafos están indicados con
+dos cambios de línea: hasta que \LaTeX\ no encuentra dos cambios de
+línea no cambia de párrafo, es decir para \LaTeX\ es lo mismo un
+cambio de línea que un espacio.
+
+También tienes otros \emph{comandos} como \verb|\paragraph|,
+\verb|\subsection|, y \verb|\subsubsection|.
+
+\subsection{Listas y enumeraciones}
+
+Como has podido ver es fácil hacer enumeraciones o listas de ``cosas''
+usando los \emph{entornos} \verb|itemize| y \verb|enumerate| (ver
+más arriba en este mismo capítulo).
+
+Puedes usar listas no numeradas:
+\begin{itemize}
+\item Cosa uno
+\item Cosa dos
+\item Cosa tres
+\item Cosa cuatro
+\end{itemize}
+
+O listas numeradas:
+\begin{enumerate}
+\item Cosa uno
+\item Cosa dos
+\item Cosa tres
+\item Cosa cuatro
+\end{enumerate}
+
+
+\subsection{Referencias}
+
+Para poder generar \emph{etiquetas} y \emph{referencias} puedes
+\textbf{y debes} usar los \emph{comandos} \verb|\label| y
+\verb|\ref| como puedes ver en el capítulo \ref{ch:intro} o en la
+sección \ref{sec:latex}. ¡No olvides compilar dos veces para que
+\LaTeX\ regenere la numeración!.
+
+\subsection{Tipografía}
+
+Puedes cambiar ciertas características del tipo de letra: \textrm{texto en ``roman font''}, \textbf{texto en negrita}, \emph{texto enfatizad}, \textit{texto en itálica}, \texttt{texto en teletype}, \textsc{Texto En Small Caps}. Por supuesto puedes combinar: \textbf{\textit{texto itálica en negrita}}
+
+\subsection{Figuras}
+
+Puedes poner cosas dentro de una figura. Por ejemplo la
+figura~\ref{fig:escudo}. LaTeX siempre intenta colocar las figuras en
+el ``mejor'' sitio.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.33\linewidth]{include/escudo_etsiinf}
+  \caption{El escudo de la ETSIINF}
+  \label{fig:escudo}
+\end{figure}
+
+\section{Matemáticas}
+
+\LaTeX\ está muy preparado para escribir fórmulas matemáticas con variables como $x$ en expresiones como esta en línea: \(\int_{a}^{b} x^2 \,dx\) o en un párrafo centrado a parte:
+
+\begin{displaymath}
+  \oint_V f(s) \,ds
+\end{displaymath}
+
+\subsection{Espaciados verticales}
+
+Trata siempre de evitar los comando \verb|\vspace|, \verb|\newpage|, \verb|\clearpage|, \verb|\\|, etc. Casi siempre hay alternativas para hacer lo que quieres sin \emph{chapucear}.
+
+\subsection{Citas bibligráficas}
+
+Las citas bibliográficas se incluyen de esta forma: puede encontrar
+las recomendaciones para realizar el TFG en
+\cite{recomendaciones}. Para añadir nuevas citas deberás poner las
+entradas en el fichero \url{*.bib} y luego puedes referenciarla.
+
+Esta es la cita bibliográfica de un libro \cite{ec}.
+
+\subsection{Ejemplo de ``por hacer'' (\emph{todonotes})}
+
+Por supuesto puedes poner TODOS:\todo{como este en el margen}.
+
+\todo[inline]{O como este ``inline''}
+
+\subsection{Ejemplo de inclusión de código fuente}
+
+A continuación se muestra un listado de código usando el paquete listings. En él se puede ver la función \lstinline{main()} de un programa en C que hace un \emph{hello world}.
+\begin{lstlisting}[language=c]
+#include <stdio.h>
+// A simple Hello World
+int main(){
+  printf("Hello World!\n");
+  return 0;
+}
+\end{lstlisting}
+
+También puedes usar el entorno \texttt{verbatim} y el comando \verb|\verb|.
+
+\subsection{Lorem Ipsum}
+Lo que sigue es un lorem ipsum como ejemplo de lo que sería una
+sección relativametne larga. Puedes usarlo para rellenar algo que aún
+no tienes claro pero que quieres que ocupe algo de sitio para ver cómo
+queda.
+
+\lipsum
