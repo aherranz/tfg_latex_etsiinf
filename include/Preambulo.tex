@@ -1,0 +1,130 @@
+% -*-coding: utf-8 -*-
+%%***********************************************
+%% Plantilla para TFG.
+%% Escuela Técnica Superior de Ingenieros Informáticos. UPM.
+%%***********************************************
+%% Preámbulo del documento.
+%%***********************************************
+\documentclass[a4paper,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,spanish,es-lcroman]{babel}
+\usepackage{bookman}
+\decimalpoint
+\usepackage{graphicx}
+\usepackage{amsfonts,amsgen,amsmath,amssymb}
+\usepackage[top=3.5cm, bottom=3.5cm, right=3cm, left=3cm]
+{geometry}
+\usepackage{afterpage}
+\usepackage{colortbl,longtable}
+\usepackage[pdfborder={0 0 0}]{hyperref} 
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage[stable]{footmisc}
+\usepackage{parskip} % para separar párrafos con espacio.
+%%-----------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+\setlength{\headheight}{1.5\headheight}
+\cfoot{\thepage}
+
+\addto\captionsspanish{ \renewcommand{\contentsname}
+  {Tabla de contenidos} }
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+
+\usepackage{appendix}
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+%\renewcommand{\appendixpagename}{Anexos}
+%%-----------------------------------------------
+%% Páginas en blanco sin cabecera:
+%%-----------------------------------------------
+\usepackage{dcolumn}
+\newcolumntype{.}{D{.}{\esperiod}{-1}}
+\makeatletter
+\addto\shorthandsspanish{\let\esperiod\es@period@code}
+
+\def\clearpage{
+  \ifvmode
+    \ifnum \@dbltopnum =\m@ne
+      \ifdim \pagetotal <\topskip
+        \hbox{}
+      \fi
+    \fi
+  \fi
+  \newpage
+  \thispagestyle{empty}
+  \write\m@ne{}
+  \vbox{}
+  \penalty -\@Mi
+}
+\makeatother
+%%-----------------------------------------------
+%% Estilos código de lenguajes: Consola, C, C++ y Python
+%%-----------------------------------------------
+\usepackage{color}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\usepackage{listings}
+\lstset{ frame=Ltb,
+     framerule=0pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray97},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\scriptsize\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     %
+     numbers=left,
+     numbersep=6pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+   }
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},    
+    }
+
+\lstdefinestyle{CodigoC}
+   {basicstyle=\scriptsize,
+	frame=single,
+	language=C,
+	numbers=left
+   }
+   
+\lstdefinestyle{CodigoC++}
+   {basicstyle=\small,
+	frame=single,
+	backgroundcolor=\color{gray75},
+	language=C++,
+	numbers=left
+   }
+
+\lstdefinestyle{Python}
+   {language=Python,    
+   }
+\makeatother   
