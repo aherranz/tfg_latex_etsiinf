@@ -18,10 +18,19 @@ Para usar esta plantilla te recomendamos:
    en el fichero `secciones/biblio.bib` y usar el programa bibtex para
    generar la bibliografía recompilando el fichero de nuevo.
 
+Ahora ya puedes generar el PDF ejecutando los siguientes mandatos en tu terminal:
+
+```bash
+pdflatex tfg_etsiinf_LuisAmigo
+bibtex tfg_etsiinf_LuisAmigo
+pdflatex tfg_etsiinf_LuisAmigo
+pdflatex tfg_etsiinf_LuisAmigo
+```
+
 ## TODO
 
 Quedan algunas cosas por mejorar en esta plantilla:
 
 - Convertir el preámbulo en un `sty` en vez de un fichero latex y así
   poder usar \usepackage{tfg_etsiinf} en vez de \input{preambulo}.
-- Mejorar el crash-course de LaTeX en la intro de la plantilla.
+- Mejorar el minitutorial de LaTeX en la intro de la plantilla.

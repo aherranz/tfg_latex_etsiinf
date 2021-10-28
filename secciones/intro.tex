@@ -76,6 +76,25 @@ deberá seguir una sintaxis muy concreta y algunas buenas
 prácticas. Las siguientes secciones entran en algunos detalles
 interesantes.
 
+\subsection{Compilación}
+
+Cuando ejecutas el \emph{compilador} (ej. \url{pdflatex}) se genera un
+PDF pero a veces las numeraciones (números de página, referencias a
+seccciones o a la bibliografía) no terminan de ser correctas y
+\textbf{es necesario compilar dos veces seguidas} e incluso intercalar
+las compilaciones con la generación de la bibliografía (por ejemplo
+con el mandato \url{bibtex}). En muchas ocasiones te verás ejecutando
+los siguientes mandatos:
+
+\begin{verbatim}
+$ pdflatex tfg_etsiinf_LuisAmigo
+$ bibtex tfg_etsiinf_LuisAmigo
+$ pdflatex tfg_etsiinf_LuisAmigo
+$ pdflatex tfg_etsiinf_LuisAmigo
+\end{verbatim}
+
+Si usas un IDE, éste suele hacer dicho trabajo por ti.
+
 \subsection{Estructura en capítulos, secciones y párrafos}
 
 Para estructurar tu documento basta con que incluyas marcas de dónde
