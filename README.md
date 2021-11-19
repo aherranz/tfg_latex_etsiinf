@@ -34,3 +34,6 @@ Quedan algunas cosas por mejorar en esta plantilla:
 - Convertir el preámbulo en un `sty` en vez de un fichero latex y así
   poder usar \usepackage{tfg_etsiinf} en vez de \input{preambulo}.
 - Mejorar el minitutorial de LaTeX en la intro de la plantilla.
+- Analizar la mejora en la accesibilidad al contenido de los
+  documentos (etiquetado): explorar por ejemplo el paquete
+  accesibility (tiene algunos problemas reconocidos).
