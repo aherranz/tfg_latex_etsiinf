@@ -1,4 +1,4 @@
-# Plantilla LaTeX para Memoria de Trabajo Fin de Grado de la ETSIINF / UPM
+# Plantilla LaTeX para Memoria de Trabajo Fin de Grado/Master de la ETSIINF / UPM
 
 Para usar esta plantilla te recomendamos:
 
