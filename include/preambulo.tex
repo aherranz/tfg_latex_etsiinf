@@ -1,26 +1,20 @@
-% -*-coding: utf-8 -*-
-%%***********************************************
-%% Plantilla para TFG.
-%% Escuela Técnica Superior de Ingenieros Informáticos. UPM.
 %%***********************************************
 %% Preámbulo del documento.
 %%***********************************************
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,spanish,es-lcroman]{babel}
+\usepackage[top=3.5cm,bottom=3.5cm,right=3cm,left=3cm]{geometry}
 \usepackage{bookman}
-\decimalpoint
 \usepackage{graphicx}
 \usepackage{amsfonts,amsgen,amsmath,amssymb}
-\usepackage[top=3.5cm, bottom=3.5cm, right=3cm, left=3cm]
-{geometry}
-\usepackage{afterpage}
 \usepackage{colortbl,longtable}
 \usepackage[pdfborder={0 0 0},pdfusetitle]{hyperref}
-\usepackage{pdfpages}
 \usepackage{url}
-\usepackage[stable]{footmisc}
 \usepackage{parskip} % para separar párrafos con espacio.
+
+%%-----------------------------------------------
+%% Cabeceras y pies de página
 %%-----------------------------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -30,25 +24,16 @@
 \setlength{\headheight}{1.5\headheight}
 \cfoot{\thepage}
 
-\addto\captionsspanish{ \renewcommand{\contentsname}
-  {Tabla de contenidos} }
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
-
 \renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newcommand{\bigrule}{\titlerule[0.5mm]}
 
-\usepackage{appendix}
-\renewcommand{\appendixname}{Anexos}
-\renewcommand{\appendixtocname}{Anexos}
-%\renewcommand{\appendixpagename}{Anexos}
+\addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
 %%-----------------------------------------------
 %% Páginas en blanco sin cabecera:
 %%-----------------------------------------------
-\usepackage{dcolumn}
-\newcolumntype{.}{D{.}{\esperiod}{-1}}
 \makeatletter
 \addto\shorthandsspanish{\let\esperiod\es@period@code}
 
