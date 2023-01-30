@@ -19,61 +19,47 @@
 %%-----------------------------------------------
 \usepackage{color}
 
-\definecolor{gray97}{gray}{.97}
-\definecolor{gray75}{gray}{.75}
-\definecolor{gray45}{gray}{.45}
-
 \usepackage{listings}
-\lstset{ frame=Ltb,
-     framerule=0pt,
-     aboveskip=0.5cm,
-     framextopmargin=3pt,
-     framexbottommargin=3pt,
-     framexleftmargin=0.4cm,
-     framesep=0pt,
-     rulesep=.4pt,
-     backgroundcolor=\color{gray97},
-     rulesepcolor=\color{black},
-     %
-     stringstyle=\ttfamily,
-     showstringspaces = false,
-     basicstyle=\scriptsize\ttfamily,
-     commentstyle=\color{gray45},
-     keywordstyle=\bfseries,
-     %
-     numbers=left,
-     numbersep=6pt,
-     numberstyle=\tiny,
-     numberfirstline = false,
-     breaklines=true,
-   }
-\lstnewenvironment{listing}[1][]
-   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
 
-\lstdefinestyle{consola}
-   {basicstyle=\scriptsize\bf\ttfamily,
-    backgroundcolor=\color{gray75},
-    }
+\definecolor{commentcolor}{rgb}{.804,0,0}
+\definecolor{keywordcolor}{rgb}{.608,.19,1}
+\definecolor{stringcolor}{rgb}{0,.545,0}
+\lstdefinestyle{color}{
+  identifierstyle=\itshape,
+  commentstyle=\itshape\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  stringstyle=\color{stringcolor},
+  emphstyle=\bfseries
+}
 
-\lstdefinestyle{CodigoC}
-   {basicstyle=\scriptsize,
-	frame=single,
-	language=C,
-	numbers=left
-   }
+\lstdefinestyle{nocolor}{
+  identifierstyle=\itshape,
+  commentstyle=\itshape,
+  keywordstyle=\bfseries,
+  stringstyle=,
+  emphstyle=\itshape
+}
 
-\lstdefinestyle{CodigoC++}
-   {basicstyle=\small,
-	frame=single,
-	backgroundcolor=\color{gray75},
-	language=C++,
-	numbers=left
-   }
-
-\lstdefinestyle{Python}
-   {language=Python,
-   }
-
+\lstset{
+  basicstyle=\ttfamily,
+  style=color,
+  extendedchars=true,
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {ñ}{~n}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+  {¿}{{?`}}1 {¡}{{!`}}1 {‘}{`}1 {’}{'}1
+  {·}{.}1
+}
 
 \usepackage[textwidth=2.5cm, textsize=smaller]{todonotes}
 \setlength{\marginparwidth}{2.5cm}
