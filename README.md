@@ -27,6 +27,12 @@ pdflatex tfg_etsiinf_LuisAmigo
 pdflatex tfg_etsiinf_LuisAmigo
 ```
 
+Si tu instalación de LaTeX incluye el programa `latexmk` entonces el siguiente mandato es suficiente:
+
+```bash
+latexmk tfg_etsiinf_LuisAmigo
+```
+
 ## TODO
 
 Quedan algunas cosas por mejorar en esta plantilla:
