@@ -41,10 +41,11 @@ Quedan algunas cosas por mejorar en esta plantilla:
   elegante y con menos estilos para diferentes lenguajes.
 - Convertir el preámbulo en un `sty` en vez de un fichero latex y así
   poder usar \usepackage{tfg_etsiinf} en vez de \input{preambulo}.
+- Refactorizar la portada empleando un LaTeX más límpio.
 - Mejorar el minitutorial de LaTeX en la intro de la plantilla.
 - Analizar la mejora en la accesibilidad al contenido de los
   documentos (etiquetado): explorar por ejemplo el paquete
-  accesibility (tiene algunos problemas reconocidos).
+  accesibility (cuidado que tiene algunos problemas reconocidos).
 - Hacer explícita la configuración sobre la profundidad de la tabla de
   contenidos (3 niveles puede ser demasiado en algunas memorias).
 - Introducir el paquete csquotes para quotation marks.
