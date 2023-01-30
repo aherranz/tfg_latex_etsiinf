@@ -37,8 +37,6 @@ latexmk tfg_etsiinf_LuisAmigo
 
 Quedan algunas cosas por mejorar en esta plantilla:
 
-- Eliminar tanta configuración poco útil listings, se puede hacer más
-  elegante y con menos estilos para diferentes lenguajes.
 - Convertir el preámbulo en un `sty` en vez de un fichero latex y así
   poder usar \usepackage{tfg_etsiinf} en vez de \input{preambulo}.
 - Refactorizar la portada empleando un LaTeX más límpio.
