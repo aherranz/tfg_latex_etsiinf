@@ -10,7 +10,7 @@ El esquema básico de una memoria final de TFG es el siguiente:
 \item Resumen en español e inglés (máximo 2 páginas cada uno)
 \item Tabla de contenidos
 \item Introducción (con los objetivos del TFG)
-\item Desarrollo
+\item Desarrollo (varios capítulos, ej. Análisis, Diseño e Implementación)
 \item Resultados y conclusiones
 \item Análisis de impacto
 \item Bibliografía (publicaciones utilizadas en el estudio y desarrollo del trabajo)
@@ -137,6 +137,24 @@ O listas numeradas:
 \end{enumerate}
 
 
+\subsection{Tablas}
+El principal entorno para hacer tablas es \verb!tabular!. Veamos un ejemplo:
+
+\begin{tabular}{||l|c|r|p{15em}|}
+  \hline
+  \hline
+  \textbf{Alimento} & \textbf{Categoría} & \textbf{Kcal/100gr} & \textbf{Descripción}\\
+  \hline
+  \hline
+  Manzana & Fruta & 52 & Es el fruto comestible de la especie Malus domestica, el manzano común. Es una fruta pomácea de forma redonda y sabor muy dulce, dependiendo de la variedad.\\
+  \hline
+  Repollo & Verdura & 19 & Es una planta comestible de la familia de las Brasicáceas, y una herbácea bienal, cultivada como anual, cuyas hojas lisas forman un característico cogollo compacto.\\
+  \hline
+  \hline
+  \hline
+\end{tabular}
+
+
 \subsection{Referencias}
 
 Para poder generar \emph{etiquetas} y \emph{referencias} puedes
@@ -148,6 +166,16 @@ sección \ref{sec:latex}. ¡No olvides compilar dos veces para que
 \subsection{Tipografía}
 
 Puedes cambiar ciertas características del tipo de letra: \textrm{texto en ``roman font''}, \textbf{texto en negrita}, \emph{texto enfatizad}, \textit{texto en itálica}, \texttt{texto en teletype}, \textsc{Texto En Small Caps}. Por supuesto puedes combinar: \textbf{\textit{texto itálica en negrita}}
+
+\subsection{Alineado}
+El alineado de todo en \LaTeX\ es por defecto a la izquierda.
+
+\begin{center}
+  Puedes centrar con el entorno \verb!center!
+\end{center}
+
+\hfill
+Y puedes alinear a la derecha con \verb!\hfill!
 
 \subsection{Figuras}
 
