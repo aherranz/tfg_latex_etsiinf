@@ -16,42 +16,21 @@
 %%-----------------------------------------------
 %% Cabeceras y pies de página
 %%-----------------------------------------------
+\usepackage{emptypage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LO]{\leftmark}
-\fancyhead[RE]{\rightmark}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
 \setlength{\headheight}{1.5\headheight}
 \cfoot{\thepage}
 
-\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{Capítulo \thechapter. #1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
 
 \addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
-
-%%-----------------------------------------------
-%% Páginas en blanco sin cabecera:
-%%-----------------------------------------------
-\makeatletter
-\addto\shorthandsspanish{\let\esperiod\es@period@code}
-
-\def\clearpage{
-  \ifvmode
-    \ifnum \@dbltopnum =\m@ne
-      \ifdim \pagetotal <\topskip
-        \hbox{}
-      \fi
-    \fi
-  \fi
-  \newpage
-  \thispagestyle{empty}
-  \write\m@ne{}
-  \vbox{}
-  \penalty -\@Mi
-}
-\makeatother
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
 
 %%-----------------------------------------------
 %% Configuración relacionada con la accesibilidad del documento PDF
