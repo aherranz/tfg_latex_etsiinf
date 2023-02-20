@@ -38,4 +38,3 @@ Quedan algunas cosas por mejorar en esta plantilla:
 - Analizar la mejora en la accesibilidad al contenido de los
   documentos (etiquetado): explorar por ejemplo el paquete
   accesibility (cuidado que tiene algunos problemas reconocidos).
-- Introducir el paquete csquotes para quotation marks.
