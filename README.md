@@ -2,6 +2,11 @@
 
 Para usar esta plantilla te recomendamos:
 
+0. Descarga la última versión de la plantilla, puedes encontrar un
+   archivo en https://github.com/aherranz/tfg_latex_etsiinf/tags o en
+   la página web de la escuela. **Importante:** si quieres poner tu
+   trabajo fin de estudios bajo control de versiones es mejor que **no
+   clones** este repo.
 1. Cambiar el nombre del documento principal (`tfg_etsiinf_plantilla.tex`) para
    que incluya el nombre del alumno (ej. `tfg_etsiinf_LuisAmigo.tex`).
 2. Modifica los datos de tu TFG en `datos_tfg.tex`.
