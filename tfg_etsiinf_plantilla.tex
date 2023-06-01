@@ -1,24 +1,61 @@
-%%***********************************************
-%% Plantilla para TFG.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Plantilla para trabajos fin de estudios (grado y master).
 %% Escuela Técnica Superior de Ingenieros Informáticos. UPM.
-%%***********************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,11pt]{book}
 
-%%-----------------------------------------------
-%% Importar Preámbulo:
-\input{include/preambulo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuración relacionada con normativa
+\usepackage[T1]{fontenc} % font encoding
+\usepackage[utf8]{inputenc} % input encoding
+\usepackage[english,spanish,es-lcroman]{babel} % idiomas (por defecto se activa el último)
+\usepackage[top=3.5cm,bottom=3.5cm,right=3cm,left=3cm]{geometry} % dimensiones de la hoja
+\usepackage{bookman} % tipo de letra del texto
+\usepackage[backend=biber,style=ieee]{biblatex} % bibliografía
+\addbibresource{secciones/biblio.bib} % fichero/s donde estará la bibliografía
 
-%% -----------------------------------------------
-%% Cargar datos relativos al TFG:
-%% (actualizar estos datos en ./datos_tfg.tex)
-\input{datos_tfg}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuración relacionada con la accesibilidad del documento PDF
+%% (tagged PDF).
+%% Comentado porque tiene algunos problems relacionados con otros paquetes
+\usepackage{accessibility}
 
-%% -----------------------------------------------
-%% Importación de otros paquetes de LaTeX a usar en el desarrollo del TFG:
-%% (veanse algunos ejemplos como listings (para incluir código), todonotes (para poner anotaciones al margen con cosas por hacer), etc.
-%%-----------------------------------------------
-\usepackage{color}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuración de cabeceras y pies de página
+\usepackage{emptypage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\setlength{\headheight}{1.5\headheight}
+\cfoot{\thepage}
 
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{Capítulo \thechapter. #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuración para profundidad de la numeración e índice
+\addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Algunos paquetes útiles
+\usepackage{colortbl} % colores en tablas
+\usepackage{longtable} % tablas en múltiples páginas
+\usepackage[pdfborder={0 0 0},pdfusetitle]{hyperref} % hypervínculos
+\usepackage{parskip} % separa párrafos con espacio vertical
+\usepackage{csquotes} % comillas en diferentes idiomas y contextos.
+\usepackage{xcolor} % colores en texto y background
+\usepackage[textwidth=2.5cm, textsize=smaller]{todonotes} % notas con errores o cosas por hacer
+\setlength{\marginparwidth}{2.5cm}
+\usepackage{lipsum} % permite incluir lorem-ipsum y hacer pruebas
+\usepackage{relsize} % permite cambiar tamaños de texto relativos (\smaller y \larger)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuración para insertar y referirse a código en cualquier
+%% lenguaje de programación
 \usepackage{listings}
 
 \definecolor{commentcolor}{rgb}{.804,0,0}
@@ -58,36 +95,32 @@
   {ñ}{~n}1
   {€}{{\EUR}}1 {£}{{\pounds}}1
   {¿}{{?`}}1 {¡}{{!`}}1 {‘}{`}1 {’}{'}1
-  {·}{.}1
+  {·}{.}1,
+  showstringspaces=false
 }
 
-\usepackage[textwidth=2.5cm, textsize=smaller]{todonotes}
-\setlength{\marginparwidth}{2.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cargar datos relativos al trabajo: estudios, título, autor, etc.
+\input{datos_tfg}
 
-\usepackage{lipsum}
-
-\usepackage{relsize}
-
-%%-----------------------------------------------
-%% Documento:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Empieza el documento
 \begin{document}
 
+%% -----------------------------------------------
 \input{include/portada}
-
-%%-----------------------------------------------
-%% Numeración romana:
-\frontmatter
+\frontmatter % numeración romana
 
 %% -----------------------------------------------
 \input{secciones/resumen}
+
+%% -----------------------------------------------
 \tableofcontents
 
-%%-----------------------------------------------
-%% Numeración arábiga:
-\mainmatter
+\mainmatter % numeración arábiga
 
 %%-----------------------------------------------
-%% Contenido del TFG
+%% Capítulos del trabajo
 \input{secciones/intro}
 
 \input{secciones/desarrollo}
@@ -101,8 +134,7 @@
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{IEEEtran}
-\bibliography{secciones/biblio}
+\printbibliography
 
 %% -----------------------------------------------
 %% Anexos
@@ -111,7 +143,6 @@
 \addcontentsline{toc}{part}{Anexos}
 \input{secciones/anexo1}
 
-%% ---------------------------------------------------------
 \end{document}
 
 %%% Local Variables:

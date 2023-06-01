@@ -1,23 +1,24 @@
 \chapter{Introducción}
 \label{ch:intro}
 
-La introducción del TFG debe servir para que los profesores que evalúan el Trabajo puedan comprender el contexto en el que se realiza el mismo, y los objetivos que se plantean.
+El capítulo de introducción debe servir para que los profesores que evalúan el trabajo puedan comprender el contexto en el que se realiza el mismo, y los objetivos que se plantean.
 
-Esta plantilla muestra la estructura básica de la memoria final de TFG, así como algunas instrucciones de formato.
+Esta plantilla muestra la estructura básica de la memoria final de un trabajo fin de grado (TFG), así como algunas instrucciones de formato. En el caso de una tesis de master el tutor del mismo deberá ofrecerte indicaciones más precisas.
 
 El esquema básico de una memoria final de TFG es el siguiente:
 \begin{itemize}
 \item Resumen en español e inglés (máximo 2 páginas cada uno)
 \item Tabla de contenidos
 \item Introducción (con los objetivos del TFG)
-\item Desarrollo (varios capítulos, ej. Análisis, Diseño e Implementación)
-\item Resultados y conclusiones
-\item Análisis de impacto
+\item Estado del arte y/o preliminares
+\item Desarrollo (normalmente varios capítulos, ej. Análisis, Diseño e Implementación)
+\item Análisis de impacto (puede formar parte de las conclusiones)
+\item Resultados, conclusiones y trabajo futuro
 \item Bibliografía (publicaciones utilizadas en el estudio y desarrollo del trabajo)
 \item Anexos (opcional)
 \end{itemize}
 
-En cualquier caso, es el tutor del TFG quien indicará a su estudiante la estructura de memoria final que mejor se ajuste al trabajo desarrollado.
+En cualquier caso, es el tutor del trabajo quien indicará a su estudiante la estructura de memoria final que mejor se ajuste al trabajo desarrollado.
 
 Con respecto al formato, se seguirán las siguientes pautas, que se muestran en esta plantilla:
 \begin{itemize}
@@ -37,7 +38,7 @@ Con respecto al formato, se seguirán las siguientes pautas, que se muestran en 
 
 \medskip
 
-Para elaborar la memoria final del TFG con esta plantilla, seguir los siguientes pasos:
+Para elaborar la memoria final del trabajo con esta plantilla, seguir los siguientes pasos:
 \begin{enumerate}
 \item Descargar e instalar una distribución de \LaTeX. Por ejemplo:
   \begin{itemize}
@@ -51,7 +52,7 @@ Para elaborar la memoria final del TFG con esta plantilla, seguir los siguientes
 \item Cambiar el nombre del \textbf{documento principal
     \url{`tfg_etsiinf_plantilla.tex}} para que incluya el nombre del
   alumno (ej. \url{tfg_etsiinf_LuisAmigo.tex}).
-\item Modifica los datos de tu TFG en \url{datos_tfg.tex}.
+\item Modifica los datos de tu trabajo en \url{datos_tfg.tex}.
 \item Observa el fichero documento principal y cómo se van incluyendo
   los contenidos de la memoria a partir de los ficheros en el
   directorio \url{secciones}.
@@ -112,13 +113,18 @@ empiezan los capítulos y secciones. Así\footnote{Como ya habrás podido
 \section{Título de la sección}
 \end{verbatim}
 
-Es \textbf{importante} observar que los párrafos están indicados con
-dos cambios de línea: hasta que \LaTeX\ no encuentra dos cambios de
-línea no cambia de párrafo, es decir para \LaTeX\ es lo mismo un
+Es importante observar que \textbf{los párrafos están indicados con
+  dos cambios de línea}: hasta que \LaTeX\ no encuentra dos cambios de
+línea no cambia de párrafo, es decir para \LaTeX\ es lo mismo un único
 cambio de línea que un espacio.
 
-También tienes otros \emph{comandos} como \verb|\paragraph|,
-\verb|\subsection|, y \verb|\subsubsection|.
+Si colocas tu memoria bajo control de versiones, algo altamente
+recomendado, te aconsejamos \textbf{que las líneas en el fichero \url{.tex} no
+sean muy largas} para así poder ver los cambios en cada \emph{commit}
+del sistema de control de versiones.
+
+También tienes otros \emph{comandos} como \verb|\subsection|,
+\verb|\subsubsection| y finalmente \verb|\paragraph|.
 
 \subsection{Listas y enumeraciones}
 
@@ -146,7 +152,7 @@ O listas numeradas:
 \subsection{Tablas}
 El principal entorno para hacer tablas es \verb!tabular!. Veamos un ejemplo:
 
-\begin{tabular}{||l|c|r|p{15em}|}
+\begin{tabular}{||l|c|r|p{15em}||}
   \hline
   \hline
   \textbf{Alimento} & \textbf{Categoría} & \textbf{Kcal/100gr} & \textbf{Descripción}\\
@@ -157,9 +163,10 @@ El principal entorno para hacer tablas es \verb!tabular!. Veamos un ejemplo:
   Repollo & Verdura & 19 & Es una planta comestible de la familia de las Brasicáceas, y una herbácea bienal, cultivada como anual, cuyas hojas lisas forman un característico cogollo compacto.\\
   \hline
   \hline
-  \hline
 \end{tabular}
 
+Si quieres que una tabla ocupe \textbf{más de una página} tienes que
+usar el entorno \verb|longtable|. Tendrás que leer su documentación.
 
 \subsection{Referencias}
 
@@ -183,7 +190,7 @@ introducir entrecomillados sensibles al lenguaje y al contexto:
 El alineado de todo en \LaTeX\ es por defecto a la izquierda.
 
 \begin{center}
-  Puedes centrar con el entorno \verb!center!
+  Puedes centrar casi caulquier cosa con el entorno \verb!center!
 \end{center}
 
 \hfill
@@ -191,9 +198,11 @@ Y puedes alinear a la derecha con \verb!\hfill!
 
 \subsection{Figuras}
 
-Puedes poner cosas dentro de una figura. Por ejemplo la
+Puedes poner cualquier cosa dentro de una figura. Por ejemplo la
 figura~\ref{fig:escudo}. LaTeX siempre intenta colocar las figuras en
-el ``mejor'' sitio.
+el ``mejor'' sitio aunque tú le puedes orientar si la quieres
+\emph{here}, \emph{top} o \emph{bottom} con \verb|[h]|, \verb|[t]| o
+\verb|[b]|.
 
 \begin{figure}[h]
   \centering
@@ -201,6 +210,13 @@ el ``mejor'' sitio.
   \caption{El escudo de la ETSIINF}
   \label{fig:escudo}
 \end{figure}
+
+Una vez que has incluido una figura la puedes referenciar tantas veces como quieras: ver figura~\ref{fig:escudo}.
+
+Si simplemente quieres incluir un gráfico que fluya con el texto puedes hacerlo cuando quieras como por ejemplo ahora mismo:
+\begin{center}
+  \includegraphics[width=0.15\linewidth]{include/escudo_upm}
+\end{center}
 
 \section{Matemáticas}
 
@@ -217,21 +233,22 @@ Trata siempre de evitar los comando \verb|\vspace|, \verb|\newpage|, \verb|\clea
 \subsection{Citas bibligráficas}
 
 Las citas bibliográficas se incluyen de esta forma: puede encontrar
-las recomendaciones para realizar el TFG en
+las recomendaciones para realizar el trabajo en
 \cite{recomendaciones}. Para añadir nuevas citas deberás poner las
-entradas en el fichero \url{*.bib} y luego puedes referenciarla.
+entradas en el fichero \url{*.bib} siguiendo el formato
+\emph{bibtex}~\cite{bibtex} y luego puedes referenciarla.
 
 Esta es la cita bibliográfica de un libro \cite{stallings2006}.
 
 \subsection{Ejemplo de ``por hacer'' (\emph{todonotes})}
 
-Por supuesto puedes poner TODOS:\todo{como este en el margen}.
+Por supuesto puedes poner ``TODOS'':\todo{como este en el margen}.
 
 \todo[inline]{O como este ``inline''}
 
 \subsection{Ejemplo de inclusión de código fuente}
 
-A continuación se muestra un listado de código usando el paquete listings. En él se puede ver la función \lstinline{main()} de un programa en C que hace un \emph{hello world}.
+A continuación se muestra un listado de código usando el paquete \verb|listings|. En él se puede ver la función \lstinline{main()} de un programa en C que hace un \emph{hello world}.
 \begin{lstlisting}[language=c]
 #include <stdio.h>
 // A simple Hello World
@@ -241,7 +258,17 @@ int main(){
 }
 \end{lstlisting}
 
-También puedes usar el entorno \texttt{verbatim} y el comando \verb|\verb|.
+También podemos hacerlo en blanco y negro gracias a la configuración inicial:
+\begin{lstlisting}[language=c,style=nocolor]
+#include <stdio.h>
+// A simple Hello World
+int main(){
+  printf("Hello World!\n");
+  return 0;
+}
+\end{lstlisting}
+
+También puedes usar el entorno \texttt{verbatim} y el comando \verb|\verb| pero te recomendamos usar \verb|listings| y que estudies todas sus posibilidades, no en vano eres serás ingeniera informática \verb|;)|
 
 \subsection{Lorem Ipsum}
 Lo que sigue es un lorem ipsum como ejemplo de lo que sería una

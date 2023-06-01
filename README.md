@@ -36,10 +36,6 @@ pdflatex tfg_etsiinf_LuisAmigo
 
 Quedan algunas cosas por mejorar en esta plantilla:
 
-- Convertir el preámbulo en un `sty` en vez de un fichero latex y así
-  poder usar \usepackage{tfg_etsiinf} en vez de
-  \input{preambulo}. Otra opción es barajar la posibilidad de eliminar
-  el preámbulo y exponer todo en el .tex principal.
 - Analizar la mejora en la accesibilidad al contenido de los
   documentos (etiquetado): explorar por ejemplo el paquete
   accesibility (cuidado que tiene algunos problemas reconocidos).
