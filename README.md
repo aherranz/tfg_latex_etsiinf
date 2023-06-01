@@ -20,7 +20,7 @@ Para usar esta plantilla te recomendamos:
 6. A veces es bastante común tener que compilar varias veces el
    fichero para que LaTeX calcule las referencias correctamente.
 7. Si usas bibliografía, tendrás que meter entradas con formato bibtex
-   en el fichero `secciones/biblio.bib` y usar el programa bibtex para
+   en el fichero `secciones/biblio.bib` y usar el programa biber o bibtex para
    generar la bibliografía recompilando el fichero de nuevo.
 
 Ahora ya puedes generar el PDF ejecutando los siguientes mandatos en tu terminal:
