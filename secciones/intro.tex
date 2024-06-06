@@ -1,76 +1,63 @@
-\chapter{Introducción}
+\chapter{Introduction}
 \label{ch:intro}
 
-El capítulo de introducción debe servir para que los profesores que evalúan el trabajo puedan comprender el contexto en el que se realiza el mismo, y los objetivos que se plantean.
+The introduction of the Master Thesis (MT) should serve to enable the professors who assess the work to understand the context in which it is carried out, and its objectives.
 
-Esta plantilla muestra la estructura básica de la memoria final de un trabajo fin de grado (TFG), así como algunas instrucciones de formato. En el caso de una tesis de master el tutor del mismo deberá ofrecerte indicaciones más precisas.
-
-El esquema básico de una memoria final de TFG es el siguiente:
+This template shows the basic structure of MT's final report, as well as some format instructions.
 \begin{itemize}
-\item Resumen en español e inglés (máximo 2 páginas cada uno)
-\item Tabla de contenidos
-\item Introducción (con los objetivos del TFG)
-\item Estado del arte y/o preliminares
-\item Desarrollo (normalmente varios capítulos, ej. Análisis, Diseño e Implementación)
-\item Análisis de impacto (puede formar parte de las conclusiones)
-\item Resultados, conclusiones y trabajo futuro
-\item Bibliografía (publicaciones utilizadas en el estudio y desarrollo del trabajo)
-\item Anexos (opcional)
+\item Abstract in Spanish and English (maximum 2 pages each)
+\item Table of contents
+\item Introduction (containing the MT objectives)
+\item State of the art
+\item Results and conclusions
+\item Bibliography (publications used in the study and development of the work)
+\item Annexes (optional)
 \end{itemize}
 
-En cualquier caso, es el tutor del trabajo quien indicará a su estudiante la estructura de memoria final que mejor se ajuste al trabajo desarrollado.
+In any case, it is the MT supervisor who will indicate her/his student the final report structure that best fits the work carried out.
 
-Con respecto al formato, se seguirán las siguientes pautas, que se muestran en esta plantilla:
+Regarding the format, the following guidelines will be followed, which are shown in this template:
+
+instructions.
 \begin{itemize}
-\item \textit{Formato:} un único fichero PDF (recomendable que su tamaño no supere los $20$ Megas, no pudiendo ser superior a $50$ Megas), y opcionalmente un fichero comprimido para presentar código, ficheros de multimedia, etc. (de tamaño inferior a $10$ Megas)
-\item \textit{Tamaño de papel:} DIN A4 a doble cara
-\item \textit{Portada:} tal y como se recoge en las plantillas.
-\item \textit{Tipo de letra para texto.} Preferiblemente ``Bookman Old Style'' $11$ puntos o equivalente, en negro.
-\item \textit{Tipo de letra para código fuente:} ``Consolas'' o ``Roboto mono''.
-\item \textit{Márgenes:} superior e inferior $3.5$ cm, izquierdo y derecho $3.0$ cm.
-\item \textit{Superficie del texto:} $22.5$ cm de alto (aproximadamente $40$ líneas) y $15$ cm de ancho.
-\item \textit{Cabecera y pies:} fuera de la superficie del texto.
-\item \textit{Secciones y subsecciones:} reseñadas con numeración decimal a continuación del número del capítulo. Ej.: subsecciones 2.3.1.
-\item \textit{Números de página:} siempre centrado en margen inferior, página 1 comienza en capítulo 1, todas las secciones anteriores al capítulo 1 en número romano en minúscula (i, ii, iii…).
-\item \textit{Bibliografía:} según recomendaciones de la IEEE
-\href{https://www.etsiinf.upm.es/docs/estudios/grado/1475_ieeecitationref.pdf}{(ver enlace)}. En principio la plantilla sigue dichas recomendaciones si metes tu bibliografía en formato bib.
+\item \textit{Paper size:} DIN A4
+\item \textit{Front page:} as reflected in this template, with indication of university, centre, MT title and author.
+\item \textit{Second page:} bibliographic information, including all MT supervisor data.
+\item \textit{Font for text:} Preferably "Bookman Old Style" 11 points. If this is not possible, the recommended alternatives are, in order of preference: "Palatino Linotype", "Garamond" or "Georgia.
+\item \textit{Font for source code:} "Consoles" or "Monkey Robot"
+\item \textit{Margins:} top and bottom 3 cm, left and right 2.54 cm.
+\item \textit{Sections and subsections:} Reviewed with decimal numbering after the chapter number. E.g., subsections 2.3.1.
+\item \textit{Page numbers:} always centred on lower margin, page 1 starts in chapter 1, all sections prior to chapter 1 in Roman number in lowercase (i, ii, iii...).
 \end{itemize}
 
 \medskip
 
-Para elaborar la memoria final del trabajo con esta plantilla, seguir los siguientes pasos:
+In order to use this template, follow the next steps:
 \begin{enumerate}
-\item Descargar e instalar una distribución de \LaTeX. Por ejemplo:
+\item Download and install a \LaTeX distribution, such as:
   \begin{itemize}
   \item MiKTeX:  \url{https://miktex.org/}
   \item TeX Live: \url{https://www.tug.org/texlive/}
   \end{itemize}
-\item Descargar e instalar un editor de \LaTeX~ , por ejemplo
+\item Download and install a \LaTeX~ editor, such as:
   Texmaker: \url{https://www.xm1math.net/texmaker/}, TeXstudio:
   \url{https://www.texstudio.org/}, o Emacs:
   \url{https://www.gnu.org/software/auctex/}.
-\item Cambiar el nombre del \textbf{documento principal
-    \url{`tfg_etsiinf_plantilla.tex}} para que incluya el nombre del
-  alumno (ej. \url{tfg_etsiinf_LuisAmigo.tex}).
-\item Modifica los datos de tu trabajo en \url{datos_tfg.tex}.
+\item Another options is to use Overleaf website linked to your UPM's account \url{https://www.overleaf.com/}
+\item Change the name of \textbf{documento principal
+    \url{`tfg_etsiinf_plantilla.tex}} to include author's name (Ex. \url{tfg_etsiinf_LuisAmigo.tex}).
+\item Modify data \url{datos_tfg.tex}.
 \item Observa el fichero documento principal y cómo se van incluyendo
   los contenidos de la memoria a partir de los ficheros en el
   directorio \url{secciones}.
-\item Por supuesto puedes modificar la estructura de secciones
-  propuestas para adecuarla al tipo de trabajo que realices (no
-  olvides modificar y reordenar los \verb|\inputs| en el documento
+\item Sections structure can be changed as needed by the work structure defined. However, don't forget to modify the \verb|\inputs| in the document accordingly.
   principal).
-\item Si no sabes LaTeX te recomendamos explorar el contenido de los
-  ficheros para aprender un uso básico y algunas buenas prácticas.
-\item A veces es bastante común tener que compilar varias veces el
-  fichero para que LaTeX calcule las referencias correctamente.
-\item Si usas bibliografía, tendrás que meter entradas con formato
-  bibtex en el fichero \url{secciones/biblio.bib} y usar el programa
-  \url{bibtex} para generar la bibliografía recompilando el fichero de
-  nuevo.
+\item If you don't know about LaTeX we recommend you to explore the content of the files in this structure to get basic knowledge and good practices
+\item Sometimes it is needed to recompile LaTeX code to get correct references
+\item If you use bibliography, you will have to add each entry in \url{bibtex} format in the \url{secciones/biblio.bib} folder and recompile to see it updated
 \end{enumerate}
 
-\section{Algunas notas sobre el uso de \LaTeX}
+\section{Spanish: About LaTeX usage good practices and tools}
 \label{sec:latex}
 
 Si es la primera vez que te enfrentas a \LaTeX\ quizás ya te hayas

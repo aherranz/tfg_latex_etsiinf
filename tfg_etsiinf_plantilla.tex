@@ -1,27 +1,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Plantilla para trabajos fin de estudios (grado y master).
+%% Template for academic thesis for master and degrees
 %% Escuela Técnica Superior de Ingenieros Informáticos. UPM.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,11pt]{book}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configuración relacionada con normativa
+%% Thesis rules configuration
 \usepackage[T1]{fontenc} % font encoding
 \usepackage[utf8]{inputenc} % input encoding
-\usepackage[english,spanish,es-lcroman]{babel} % idiomas (por defecto se activa el último)
-\usepackage[top=3.5cm,bottom=3.5cm,right=3cm,left=3cm]{geometry} % dimensiones de la hoja
-\usepackage{bookman} % tipo de letra del texto
-\usepackage[backend=biber,style=ieee]{biblatex} % bibliografía
-\addbibresource{secciones/biblio.bib} % fichero/s donde estará la bibliografía
+\usepackage[spanish,es-lcroman, english]{babel} % idiomas (por defecto se activa el último)
+\usepackage[top=3.5cm,bottom=3.5cm,right=3cm,left=3cm]{geometry} % page dimensions
+\usepackage{bookman} % Tipography
+\usepackage[backend=biber,style=ieee]{biblatex} % Bibliography
+\addbibresource{secciones/biblio.bib} % Bibliography files
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configuración relacionada con la accesibilidad del documento PDF
-%% (tagged PDF).
+%% Tagged PDF configuration
 %% Comentado porque tiene algunos problems relacionados con otros paquetes
 \usepackage{accessibility}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configuración de cabeceras y pies de página
+%% Footer and Header configurations
 \usepackage{emptypage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -31,31 +30,30 @@
 \setlength{\headheight}{1.5\headheight}
 \cfoot{\thepage}
 
-\renewcommand{\chaptermark}[1]{\markboth{\textbf{Capítulo \thechapter. #1}}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{Chapter \thechapter. #1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configuración para profundidad de la numeración e índice
-\addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
+%% Table of contents configuration
+\addto\captionsspanish{\renewcommand{\contentsname}{Table of Contents}}
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Algunos paquetes útiles
-\usepackage{colortbl} % colores en tablas
-\usepackage{longtable} % tablas en múltiples páginas
-\usepackage[pdfborder={0 0 0},pdfusetitle]{hyperref} % hypervínculos
+%% Packages definition (can be included more if needed)
+\usepackage{colortbl} % table colors
+\usepackage{longtable} % multi-page tables
+\usepackage[pdfborder={0 0 0},pdfusetitle]{hyperref} % hyperlinks
 \usepackage{parskip} % separa párrafos con espacio vertical
 \usepackage{csquotes} % comillas en diferentes idiomas y contextos.
-\usepackage{xcolor} % colores en texto y background
-\usepackage[textwidth=2.5cm, textsize=smaller]{todonotes} % notas con errores o cosas por hacer
+\usepackage{xcolor} % background and text colours
+\usepackage[textwidth=2.5cm, textsize=smaller]{todonotes} % TODO notes
 \setlength{\marginparwidth}{2.5cm}
-\usepackage{lipsum} % permite incluir lorem-ipsum y hacer pruebas
-\usepackage{relsize} % permite cambiar tamaños de texto relativos (\smaller y \larger)
+\usepackage{lipsum} % lorem-ipsum text for testing
+\usepackage{relsize} % relative text sizes modification (\smaller y \larger)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configuración para insertar y referirse a código en cualquier
-%% lenguaje de programación
+%% Configuration to insert and refer to code snippets
 \usepackage{listings}
 
 \definecolor{commentcolor}{rgb}{.804,0,0}
@@ -100,16 +98,15 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Cargar datos relativos al trabajo: estudios, título, autor, etc.
+%% Load data related input: studies, title, author (data_tfg.tex)
 \input{datos_tfg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Empieza el documento
 \begin{document}
 
 %% -----------------------------------------------
 \input{portada/portada}
-\frontmatter % numeración romana
+\frontmatter % Roman numerals
 
 %% -----------------------------------------------
 \input{secciones/resumen}
@@ -117,10 +114,10 @@
 %% -----------------------------------------------
 \tableofcontents
 
-\mainmatter % numeración arábiga
+\mainmatter % Arabic numerals
 
 %%-----------------------------------------------
-%% Capítulos del trabajo
+%% Work's chapters (as many as needed)
 \input{secciones/intro}
 
 \input{secciones/desarrollo}
@@ -130,18 +127,18 @@
 \input{secciones/conclusiones}
 
 %%-----------------------------------------------
-%% Bibliografía
+%% Bibliography
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Bibliografía}
+\addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 
 %% -----------------------------------------------
-%% Anexos
+%% Annexes
 \appendix
-\part*{Anexos}
-\addcontentsline{toc}{part}{Anexos}
-\input{secciones/anexo1}
+\part*{Annexes}
+\addcontentsline{toc}{part}{Annexes}
+\input{secciones/annexe1}
 
 \end{document}
 

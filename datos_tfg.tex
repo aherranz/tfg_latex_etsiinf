@@ -1,25 +1,22 @@
-%% Escribe el tipo de estudios (ej. Grado)
-\newcommand{\Estudios}{[ESTUDIOS, ej. Grado]}
+%% Write the type of studies, ex. Master
+\newcommand{\Studies}{[Studies, ex. Master]}
 
-%% Escribe el título del grado (ej. Ingeniería Informática):
-\newcommand{\TituloEstudios}{[TÍTULO DE LOS ESTUDIOS, ej. Ingeniería Informática]}
+%% Write the Academic title (Ex. Engineering):
+\newcommand{\StudiesTitle}{[Studies Title, (ex. Engineering)]}
 
-% Escribe el Departamento al que pertenece el Tutor (ej. Departamento de Lenguajes y Sistemas Informáticos e Ingeniería de Software):
-\newcommand{\Departamento}{[DEPARTAMENTO, ej. Departamento de Lenguajes y Sistemas Informáticos e Ingeniería de Software]}
+% Write the Department in which the tutor belongs (Ex. Engineering School):
+\newcommand{\Department}{[Department /School, (ex. Engineering School)]}
 
-%% Escribe Nombre y Apellidos del autor del trabajo:
-\newcommand{\NombreAutor}{[NOMBRE Y APELLIDOS]}
+%% Write the Name and Surname of Thesis author:
+\newcommand{\AuthorName}{[Name and Surname/s]}
 
-%% Escribe Nombre y Apellidos del Tutor del trabajo:
-\newcommand{\NombreTutor}{[NOMBRE Y APELLIDOS]}
+%% Write the Thesis Title
+\newcommand{\ThesisTitle}{[Thesis Title, Capitalizing the First Word and All Other Words, Except for Articles, Prepositions and Conjunctions]}
 
-%% ESCRIBE el Título del Trabajo:
-\newcommand{\TituloTFG}{[Título del Trabajo, con Mayúscula en Todas las Palabras que no Sean Conectivas (Artículos, Preposiciones, Conjunciones)]}
+% Write the date in which it was written using the format Month Year (Ex. January 2024)
+\newcommand{\Date}{[Month Year, (Ex. January 2024)]}
 
-% Escribe la fecha de lectura, en formato: mes año (ej. Enero 2021)
-\newcommand{\Fecha}{[MES AÑO, ej. Enero 2021]}
-
-% Establecer los datos con los comandos estándares de LaTeX
-\title{\TituloTFG}
-\author{\NombreAutor}
-\date{\Fecha}
+% Define default LaTeX params with data
+\title{\ThesisTitle}
+\author{\AuthorName}
+\date{\Date}
