@@ -12,7 +12,7 @@
 \usepackage[top=3.5cm,bottom=3.5cm,right=3cm,left=3cm]{geometry} % page dimensions
 \usepackage{bookman} % Tipography
 \usepackage[backend=biber,style=ieee]{biblatex} % Bibliography
-\addbibresource{secciones/biblio.bib} % Bibliography files
+\addbibresource{sections/biblio.bib} % Bibliography files
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tagged PDF configuration
@@ -99,17 +99,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Load data related input: studies, title, author (data_tfg.tex)
-\input{datos_tfg}
+\input{data_tfg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 %% -----------------------------------------------
-\input{portada/portada}
+\input{cover/cover}
 \frontmatter % Roman numerals
 
 %% -----------------------------------------------
-\input{secciones/resumen}
+\input{sections/abstract}
 
 %% -----------------------------------------------
 \tableofcontents
@@ -118,13 +118,13 @@
 
 %%-----------------------------------------------
 %% Work's chapters (as many as needed)
-\input{secciones/intro}
+\input{sections/intro}
 
-\input{secciones/desarrollo}
+\input{sections/stateArt}
 
-\input{secciones/impacto}
+\input{sections/impact}
 
-\input{secciones/conclusiones}
+\input{sections/conclusions}
 
 %%-----------------------------------------------
 %% Bibliography
@@ -138,7 +138,7 @@
 \appendix
 \part*{Annexes}
 \addcontentsline{toc}{part}{Annexes}
-\input{secciones/annexe1}
+\input{sections/annexe1}
 
 \end{document}
 
