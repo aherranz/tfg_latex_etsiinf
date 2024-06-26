@@ -27,7 +27,7 @@ Ahora ya puedes generar el PDF ejecutando los siguientes mandatos en tu terminal
 
 ```bash
 pdflatex tfg_etsiinf_LuisAmigo
-bibtex tfg_etsiinf_LuisAmigo
+biber tfg_etsiinf_LuisAmigo
 pdflatex tfg_etsiinf_LuisAmigo
 pdflatex tfg_etsiinf_LuisAmigo
 ```
