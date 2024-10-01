@@ -34,8 +34,12 @@ pdflatex tfg_etsiinf_LuisAmigo
 
 ## TODO
 
-Quedan algunas cosas por mejorar en esta plantilla:
+Hay muchos aspectos de esta plantilla que se pueden mejorar, entre ellas:
 
 - Analizar la mejora en la accesibilidad al contenido de los
   documentos (etiquetado): explorar por ejemplo el paquete
   accesibility (cuidado que tiene algunos problemas reconocidos).
+- Permitir que la plantilla sea multilingüe, al menos español/inglés
+  (hay una rama en la que un alumno realizó un primer intento
+  traduciendo comentarios, textos, e incluso comandos latex, habría
+  que usar `\iflanguage' del paquete Babel para hacerlo bien).
